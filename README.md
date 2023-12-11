@@ -5,7 +5,7 @@ Project for a candy store, using Firebase as the database.
 ## Contents
 
 - [Install](#install)
-- [#Characteristcs](#Characteristics)
+- [Characteristcs](#Characteristics)
 - [License](#license)
 
 ## Install

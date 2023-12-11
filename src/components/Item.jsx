@@ -6,7 +6,7 @@ const Item = ( {producto} ) => {
   return (
    
 <div className="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md m-2 my-2 mb-4">
-<div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-yellow-300 to-yellow-600">
+<div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-yellow-300 to-yellow-300">
   <img src={producto.imagen} alt={producto.titulo}  className="w-full h-full object-cover" />
 </div>
 <div className="p-6 bg-white rounded-xl shadow-md">

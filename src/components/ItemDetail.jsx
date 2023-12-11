@@ -25,12 +25,12 @@ const ItemDetail = ({ item }) => {
 
   return (
     <div className="container  mt-10">
-      <div className="producto-detalle">
+      <div className="producto-detalle  mt-10">
         <img className="rounded-xl" src={item.imagen} alt={item.titulo} />
         <div>
           <h3 className="text-[#e2e97f] text-4xl font-bold">{item.titulo}</h3>
           <p className="text-white">{item.descripcion}</p>
-          <p className="categoria  text-[#e2e97f]">Categoría: {toCapital(item.categoria)}</p>
+          <p className="categoria  text-[#292928]">Categoría: {toCapital(item.categoria)}</p>
           <p className="precio text-white">${item.precio}</p>
           {agregado ? (
             <div className="flex items-center space-x-2" >

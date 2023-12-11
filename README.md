@@ -1,25 +1,19 @@
-# SHEMEKES
+# SHEMEKES 🐹
 
-Breve descripción del proyecto.
+Project for a candy store, using Firebase as the database.
 
-## Tabla de Contenidos
+## Contents
 
 - [Instalación](#instalación)
 - [Uso](#uso)
 - [Características](#características)
 - [Licencia](#licencia)
 
-## Instalación
+## Install
 
-Proporciona instrucciones claras sobre cómo instalar y configurar tu proyecto. Incluye todos los requisitos previos necesarios.
+### `npm install`
 
-## Uso
-
-## Caracteristicas
-
-## Licencia
-
-** www.nicolecondedque.com, Hell Yeah!**
+This command will install all the dependencies listed in the package.json file of the project.
 
 ### `npm start`
 
@@ -28,4 +22,14 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Characteristics
+
+This project is developed with React using for design and Firebase for the database.
+ 
+## License
+
+** www.nicolecondedque.com, Hell Yeah!**
+
+
 

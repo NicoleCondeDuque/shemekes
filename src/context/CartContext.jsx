@@ -1,57 +1,59 @@
 import { createContext, useEffect, useState } from "react";
 
-
 export const CartContext = createContext();
 
 const carritoInicial = JSON.parse(localStorage.getItem("carrito")) || [];
 
-export const CartProvider = ({children}) => {
+export const CartProvider = ({ children }) => {
+  const [carrito, setCarrito] = useState(carritoInicial);
 
-    const [carrito, setCarrito] = useState(carritoInicial);
+  const agregarAlCarrito = (item, cantidad) => {
+    const itemAgregado = { ...item, cantidad };
 
-    const agregarAlCarrito = (item, cantidad) => {
-        const itemAgregado = { ...item, cantidad };
+    const nuevoCarrito = [...carrito];
+    const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
 
-        const nuevoCarrito = [...carrito];
-        const estaEnElCarrito = nuevoCarrito.find((producto) => producto.id === itemAgregado.id);
-
-        if (estaEnElCarrito) {
-            estaEnElCarrito.cantidad += cantidad;
-        } else {
-            nuevoCarrito.push(itemAgregado);
-        }
-        setCarrito(nuevoCarrito);
+    if (estaEnElCarrito) {
+      estaEnElCarrito.cantidad += cantidad;
+    } else {
+      nuevoCarrito.push(itemAgregado);
     }
+    setCarrito(nuevoCarrito);
+  };
 
-    const cantidadEnCarrito = () => {
-        return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
-    }
+  const eliminarProducto = (productId) => {
+    const nuevoCarrito = carrito.filter((producto) => producto.id !== productId);
+    setCarrito(nuevoCarrito);
+  };
 
-    const precioTotal = () => {
-        return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
-    }
+  const cantidadEnCarrito = () => {
+    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+  };
 
-    const vaciarCarrito = () => {
-        setCarrito([]);
-    }
+  const precioTotal = () => {
+    return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0);
+  };
 
-    useEffect(() => {
-        localStorage.setItem("carrito", JSON.stringify(carrito));
-    }, [carrito])
-    
+  const vaciarCarrito = () => {
+    setCarrito([]);
+  };
 
-    return (
-        <CartContext.Provider value={ {
-            carrito,
-            agregarAlCarrito,
-            cantidadEnCarrito,
-            precioTotal,
-            vaciarCarrito
-        } }>
-            {children}
-        </CartContext.Provider>
-    )
+  useEffect(() => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }, [carrito]);
 
-
-
-}
+  return (
+    <CartContext.Provider
+      value={{
+        carrito,
+        agregarAlCarrito,
+        eliminarProducto,
+        cantidadEnCarrito,
+        precioTotal,
+        vaciarCarrito,
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
+};

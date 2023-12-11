@@ -40,7 +40,7 @@ const ItemListContainer = () => {
       {loading ? (
   <div className="flex justify-center items-center h-screen">
   <div className="flex flex-col items-center">
-  <p className="text-[#e2e97f] mt-10 text-center " >Shemeke esta cargando los productos</p>
+  <p className="text-[#e2e97f] mt-10 text-center text-4xl " >Shemeke esta cargando los productos</p>
 <div aria-label="Orange and tan hamster running in a metal wheel" role="img" className="wheel-and-hamster mt-10">
 <div className="wheel"></div>
 <div className="hamster">

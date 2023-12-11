@@ -42,7 +42,7 @@ const Checkout = () => {
       return (
         <div className="flex justify-center items-center h-screen">
         <div className="flex flex-col items-center">
-        <p className="text-[#e2e97f] mt-10 text-center " >Shemeke esta procesando tu compra</p>
+        <p className="text-[#e2e97f] mt-10 text-center text-4xl" >Shemeke esta procesando tu compra</p>
 <div aria-label="Orange and tan hamster running in a metal wheel" role="img" className="wheel-and-hamster mt-10">
 	<div className="wheel"></div>
 	<div className="hamster">
@@ -59,7 +59,7 @@ const Checkout = () => {
 			<div className="hamster__tail"></div>
 		</div>
 	</div>
-	<div class="spoke"></div>
+	<div className="spoke"></div>
 </div>
         </div>
         </div>
@@ -81,8 +81,8 @@ const Checkout = () => {
 <h2 className='text-[#e2e97f]'>¡Gracias por elegir <span className='carrito--letra text-white'>Shemekes!</span></h2>
      <span className='text-[#e2e97f] mt-10'>
 ¡Estamos emocionados de endulzar tu día con nuestros deliciosos caramelos artesanales. Antes de finalizar, asegúrate de revisar tu pedido y detalles de envío. ¡háznoslo saber en la sección de contacto!</span>
-<p className="text-white mt-24 carrito--letra ">Total de su compra:</p>
-<p className="text-black mt-2  bg-[#e2e97f] rounded-xl text-center "> ${precioTotal()}</p>
+<p className="text-white mt-24 carrito--letra text-2xl">Total de su compra:</p>
+<p className="text-black mt-2  bg-[#e2e97f] font-mono text-4xl rounded-xl text-end mr-4 pr-6 py-2"> ${precioTotal()}</p>
       </div>
     <div className="flex justify-center items-start mt-10">
     <div className="relative flex w-96 flex-col rounded-xl bg-[#e2e97f] bg-clip-border text-gray-700 shadow-md ">
@@ -90,8 +90,7 @@ const Checkout = () => {
         <h3 className="block  text-3xl font-semibold carrito--letra leading-snug tracking-normal text-white antialiased">
         Finalizar compra:
         </h3>
-      </div>
-      
+      </div>   
       <form className="formulario"onSubmit={handleSubmit(comprar)}>
         <div className="flex flex-col gap-4 p-6">
           <div className="relative h-11 w-full min-w-[200px]">

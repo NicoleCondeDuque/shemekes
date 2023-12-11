@@ -8,7 +8,7 @@ const CartWidget = () => {
 
   return (
     <div className="cart-widget">
-     <p>🛒</p>
+     <p >🛒</p>
       <span className="bg-[#e2e97f] text-white p-2 rounded-full absolute top-1
        right-3">
         <Link className="menu-link" to="/carrito">    

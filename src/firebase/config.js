@@ -1,15 +1,18 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
+
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDnrXcfm2DFzzbMwVd2ty4oydZ9qSnGiB8",
-  authDomain: "carpishop-eb6ea.firebaseapp.com",
-  projectId: "carpishop-eb6ea",
-  storageBucket: "carpishop-eb6ea.appspot.com",
-  messagingSenderId: "380430211990",
-  appId: "1:380430211990:web:ad8ce8cba96769b84bdbb7"
+  apiKey: "AIzaSyCTdCe1hsqbrXA3fm1f8Ipe9edxeqGWTfw",
+  authDomain: "ecomerce-e8ab4.firebaseapp.com",
+  projectId: "ecomerce-e8ab4",
+  storageBucket: "ecomerce-e8ab4.appspot.com",
+  messagingSenderId: "321229055014",
+  appId: "1:321229055014:web:f56d7c277c88c6b534b2e7",
+  measurementId: "G-QGRMPY1ZBJ"
 };
 
 // Initialize Firebase

@@ -4,39 +4,50 @@ import { Link } from 'react-router-dom';
 
 const Carrito = () => {
 
-    const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
+  const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
 
-    const handleVaciar = () => {
-        vaciarCarrito();
-    }
+  const handleVaciar = () => {
+    vaciarCarrito();
+  }
 
   return (
-    <div className="container">
-        <h1 className="main-title">Carrito</h1>
 
-        {
-            carrito.map((prod) => (
-                <div key={prod.id}>
-                    <br />
-                    <h3>{prod.titulo}</h3>
-                    <p>Precio unit: ${prod.precio}</p>
-                    <p>Precio total: ${prod.precio * prod.cantidad}</p>
-                    <p>Cant: {prod.cantidad}</p>
-                    <br />
-                </div>
-            ))
-        }
 
-        {  
-            carrito.length > 0 ?
-            <>
-                <h2>Precio total: ${precioTotal()}</h2>
-                <button onClick={handleVaciar}>Vaciar</button>
-                <Link to="/checkout">Finalizar compra</Link>
-            </> :
-            <h2>El carrito está vacío :(</h2>
-        }
-        
+    <div className="container--carrito mt-28">
+      <h1 className="text-[#e2e97f] text-7xl carrito--letra">Carrito</h1>
+
+      {
+        carrito.map((prod) => (
+          <div key={prod.id}>
+            <br />
+            <div className="flex flex-col bg-white rounded-3xl">
+              <div className="px-6 py-8 sm:p-10 sm:pb-6">
+                <div className="grid items-center justify-center w-full grid-cols-1 text-left">
+                  <div>
+                    <h3 className="text-black font-bold text-xl  ">{prod.titulo}</h3>
+                    <p className="text-black">Precio unit: ${prod.precio}</p>
+                    <p className="text-black">Precio total: ${prod.precio * prod.cantidad}</p>
+                    <p className="text-black">Cant: {prod.cantidad}</p>
+                    <br />
+                  </div>
+                </div></div></div>
+          </div>
+        ))
+      }
+
+      {
+        carrito.length > 0 ?
+          <>
+           <div className="flex flex-col bg-[#e2e97f] rounded-3xl mt-6">
+              <div className=" py-8 sm:p-10 sm:pb-6 font-bold text-xl text-right">
+            <h2 className="text-black">Precio total: ${precioTotal()}</h2>
+            </div>
+            </div>
+            <button className="mt-4 rounded-lg bg-[#e2e97f] py-2 px-2 text-xs font-bold uppercase text-black shadow-md transition-all hover:shadow-lg focus:opacity-85 active:opacity-85" onClick={handleVaciar}>Vaciar</button>
+            <Link className="mt-4 ml-4 rounded-lg bg-[#e2e97f] py-2 px-2 text-xs font-bold uppercase text-black shadow-md transition-all hover:shadow-lg focus:opacity-85 active:opacity-85" to="/checkout">Finalizar compra</Link>
+          </> :
+          <h2 className="text-white mt-10 text-center text-5xl font-serif ">El carrito está vacío!🐹 </h2>
+      }
     </div>
   )
 }

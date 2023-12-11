@@ -4,20 +4,20 @@ import CartWidget from './CartWidget'
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
-        <Link to="/" className="logo"><h1>Carpishop</h1></Link>
-        <ul className="menu">
-            <li><Link className="menu-link" to="/">Inicio</Link></li>
-            <li><Link className="menu-link" to="/productos">Productos</Link></li>
-            <li><Link className="menu-link" to="/productos/medias">Medias</Link></li>
-            <li><Link className="menu-link" to="/productos/pantalones">Pantalones</Link></li>
-            <li><Link className="menu-link" to="/productos/remeras">Remeras</Link></li>
-            <li><Link className="menu-link" to="/productos/buzos">Buzos</Link></li>
-            <li><Link className="menu-link" to="/nosotros">Nosotros</Link></li>
-            <li><Link className="menu-link" to="/contacto">Contacto</Link></li>
-            <li><CartWidget /></li>
-        </ul>
-    </nav>
+    <div className="flex justify-between items-center h-24 max-w-[1240] mx-auto px-4 text-black">
+   
+        <Link to="/" className="w-full text-7xl mt-12 font-bold carrito--letra text-[#e2e97f]">
+        Shemekes
+      </Link>
+        <ul className=" font-bold md:flex mt-12">        
+            <li><Link className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f]  hover:-translate-y-1 hover:scale-110 hover:bg-[#e2e97f] hover:text-black duration-300" to="/">Inicio</Link></li>
+            <li><Link className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f] hover:-translate-y-1 hover:scale-110 hover:bg-[#e2e97f] hover:text-black duration-300" to="/productos">Productos</Link></li>           
+            <li><Link className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f] hover:-translate-y-1 hover:scale-110 hover:bg-[#e2e97f] hover:text-black duration-300" to="/productos/con-azucar">+Azucar</Link></li>
+            <li><Link  className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f] hover:-translate-y-1 hover:scale-110 hover:bg-[#e2e97f] hover:text-black duration-300" to="/productos/sin-azucar">0Azucar</Link></li>
+            <li><Link className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f] hover:-translate-y-1 hover:scale-110 hover:bg-[#e2e97f] hover:text-black duration-300" to="/contacto">Contacto</Link></li>
+            <li className="p-4 transition ease-in-out delay-150 bg-[#e0dac] text-[#e2e97f] hover:-translate-y-1 hover:scale-10 hover:bg-[#e2e97f] hover:text-black duration-300"><CartWidget /></li>
+        </ul>  
+    </div>
   )
 }
 

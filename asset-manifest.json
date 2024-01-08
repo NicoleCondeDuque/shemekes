@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shemekes/static/css/main.2448bd76.css",
+    "main.js": "/shemekes/static/js/main.7ee2eff1.js",
+    "index.html": "/shemekes/index.html",
+    "main.2448bd76.css.map": "/shemekes/static/css/main.2448bd76.css.map",
+    "main.7ee2eff1.js.map": "/shemekes/static/js/main.7ee2eff1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2448bd76.css",
+    "static/js/main.7ee2eff1.js"
+  ]
+}

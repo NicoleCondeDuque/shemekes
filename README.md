@@ -28,7 +28,7 @@ This project is developed with React using for design and Firebase for the datab
  
 ## License
 
-** www.nicolecondedque.com, Hell Yeah!**
+** www.nicolecondeduque.com, Yeah!**
 
 
 
